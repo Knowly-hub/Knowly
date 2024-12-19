@@ -1,0 +1,2063 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background-color: #f4f5f7;
+    color: #2c3e50;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+.section-title h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 40px;
+}
+.scroll-up-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #595959;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .scroll-up-btn a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .scroll-up-btn:hover {
+    background-color: #353535;
+  }
+  
+  .scroll-up-btn.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 25px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 800;
+    position: relative;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 50%;
+    background-color: #EDB539;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #EDB539;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.login-register a {
+    text-decoration: none;
+    color: #EDB539;
+    border: 2px solid #EDB539;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.login-register a:hover {
+    background-color: #3b82f6;
+    color: white;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25);
+}
+
+.search-icon i {
+    font-size: 22px;
+    color: #EDB539;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-icon i:hover {
+    color: #3b82f6;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-register, .search-icon {
+        margin-top: 15px;
+    }
+}
+
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 80px 80px 150px;
+    background-color: #f5f5f5;
+}
+
+.landing-content {
+    max-width: 650px;
+    text-align: left;
+}
+
+.landing-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.landing-content p {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #EDB539;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.cta-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); 
+}
+
+
+.cta-button:hover {
+    background-color: #2563eb;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25);
+}
+
+.landing-image img {
+    max-width: 600;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .landing {
+        flex-direction: column;
+        padding: 80px 20px;
+    }
+
+    .landing-content {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .landing-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .landing-image img {
+        max-width: 400px;
+    }
+}
+
+.landing-footer {
+    text-align: center;
+}
+
+.leading-footer-container {
+    width: 100%;
+    background: linear-gradient(to right, #4C6C36, #EDBD3A); /* Gradien latar belakang */
+    padding: 30px 50px;
+}
+
+.leading-footer-container p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.partner-list-container {
+    display: flex; 
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 50px; 
+}
+
+.partner-list {
+    width: 180px; 
+    background-color: white; 
+    padding: 15px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0; 
+    justify-items: center;
+}
+
+.partner-list img {
+    width: auto;
+    height: 30px;
+    display: block;
+    border-radius: 15px; 
+}
+
+.partner-list:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+}
+
+@media (max-width: 768px) {
+    .leading-footer-container {
+        padding: 20px 10px;
+    }
+    
+    .partner-list {
+        margin: 10px;
+        max-width: 120px;
+    }
+
+    .leading-footer-container p {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .partner-list {
+        margin: 5px;
+        max-width: 100px; 
+    }
+
+    .leading-footer-container p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/*Popular Course Section*/
+
+.popular-courses {
+    padding: 60px 0px;
+    background-color: #f5f5f5; 
+    text-align: center;
+}
+
+
+.courses {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+    gap: 50px;
+    flex-wrap: wrap; /* Membuat elemen masuk ke baris baru jika ruang terbatas */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Menambahkan margin auto agar konten berada di tengah secara horizontal */
+    max-width: 1200px; /* Menambahkan batasan lebar maksimum jika diperlukan */
+}
+
+.course-card {
+    background-color: white;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.course-card-content {
+    padding: 20px;
+}
+
+.course-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    z-index: 1; /* Added this to ensure the course image is below the student image */
+}
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.student-image {
+    position: relative;
+    margin-top: -33px; /* Adjusted the margin-top to position the student image properly */
+    z-index: 2; /* Increased the z-index to make the student image appear on top */
+}
+
+
+.course-info {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.course-info .periode {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.course-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+.course-card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.course-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.course-price .after-discount {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #EDB539;
+}
+
+.course-price .before-discount {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #777;
+    text-decoration: line-through;
+}
+
+.enroll-button a {
+    display: inline-block;
+    background-color: #EDB539;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.enroll-button a:hover {
+    background-color: #C49B2B;
+}
+
+.seemore-button {
+    display: inline-block;
+    background-color: #EDB539;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 35px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.seemore-button:hover {
+    background-color: #C49B2B;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+/* Responsif untuk perangkat dengan lebar layar lebih kecil */
+@media (max-width: 768px) {
+    .section-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .courses {
+        grid-template-columns: repeat(2, 1fr); /* Mengubah menjadi 2 kolom pada perangkat dengan lebar lebih kecil */
+    }
+
+    .course-card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .courses {
+        grid-template-columns: 1fr; /* Mengubah menjadi 1 kolom pada perangkat dengan lebar sangat kecil */
+
+    }
+
+    .course-card {
+        width: 90%;
+    }
+}
+
+
+.tutors-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5; 
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.tutors-section .section-title h1{
+    max-width: 800px;
+}
+
+.tutors {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+    gap: 50px;
+    flex-wrap: wrap; /* Membuat elemen masuk ke baris baru jika ruang terbatas */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Menambahkan margin auto agar konten berada di tengah secara horizontal */
+    max-width: 1200px;
+}
+
+.tutors-card {
+    background-color: white;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px; /* Memberikan jarak antar kartu */
+}
+
+.tutors-card:hover {
+    transform: translateY(-5px); /* Efek hover untuk mengangkat kartu */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar saat hover */
+}
+
+.tutors-card-content {
+    padding: 20px;
+}
+
+.tutors-image {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.tutors-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tutors-info {
+    text-align: left;
+}
+
+.tutors-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tutors-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsif untuk perangkat dengan lebar layar lebih kecil */
+@media (max-width: 768px) {
+    .tutors-card {
+        width: 280px;
+    }
+
+    .tutors {
+        grid-template-columns: repeat(2, 1fr); /* Mengubah menjadi 2 kolom pada perangkat dengan lebar lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .tutors-card {
+        width: 90%;
+    }
+
+    .tutors {
+        grid-template-columns: 1fr; /* Mengubah menjadi 1 kolom pada perangkat dengan lebar sangat kecil */
+
+    }
+}
+
+.terstimoni-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+
+.testi {
+    display: flex;
+    flex-direction: column; /* Membuat elemen mengalir ke bawah */
+    gap: 30px; /* Jarak antar elemen */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    width: 100%; /* Menambahkan lebar 100% agar tidak melebihi kontainer */
+}
+
+.testi-card {
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    text-align: left; /* Mengatur text di dalam kartu untuk rata tengah */
+}
+
+.testi-card:hover {
+    transform: translateY(-5px); /* Efek hover untuk mengangkat kartu */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar saat hover */
+}
+
+.testi-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.testi-card br {
+    display: block;
+    content: "";
+    border-top: 1px solid #333; /* Garis pemisah */
+    margin: 20px 0; 
+}
+
+.testi-profile {
+    display: flex;
+    align-items: center;
+}
+
+.testi-profile img {
+    width: 100px;
+    height: 80px;
+    border-radius: 15px;
+    margin-right: 1rem;
+    object-fit:scale-down;
+}
+
+.testi-profile h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.testi-footer a {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.testi-footer a:hover {
+    background-color: #ffb700;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .testi {
+        padding: 10px;
+    }
+
+    .testi-card {
+        width: 90%; /* Lebar kartu lebih kecil di perangkat menengah */
+    }
+}
+
+@media (max-width: 480px) {
+    .testi {
+        padding: 5px;
+    }
+
+    .testi-card {
+        width: 100%; /* Kartu akan mengambil 100% lebar pada perangkat kecil */
+    }
+}
+
+
+
+
+footer {
+    background-color: #dddddd;
+    padding: 80px 0px 0px;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  
+  .footer-section {
+    text-align: left;
+    padding-bottom: 100px;
+    margin-left: 30px;
+  }
+  
+  .footer-logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #333;
+  }
+  
+  .footer-section p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .footer-copyright {
+    background-color: #d3d2d2;
+    padding: 20px;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+  /** CORPORATE SECTION **/
+  .corporate-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+
+}
+
+
+.programs {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+.programs-card {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.programs-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.programs-image {
+    flex: 0 0 35%; 
+    background-color: #5f9ea0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.programs-image img {
+    object-fit: cover;
+}
+
+.programs-card-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.periode {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #556b2f;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.enroll-button a {
+    display: inline-block;
+    background-color: #d8b834;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enroll-button a:hover {
+    background-color: #c9a52b;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .programs-card {
+        flex-direction: column;
+    }
+
+    .programs-image {
+        flex: 0 0 auto;
+    }
+
+    .programs-image img {
+        width: 100px;
+    }
+}
+
+/* General Styling */
+.consultasi-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    display: grid;
+    place-items: center; /* Pusatkan horizontal & vertikal */
+}
+
+
+
+/* Form Styling */
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Pastikan jarak kecil */
+}
+
+.checkbox input {
+    width: 15px;
+    margin: 0; /* Hapus margin default */
+    flex: 0 0 auto; /* Tetapkan ukuran checkbox */
+
+}
+
+.checkbox label {
+    margin: 0; /* Pastikan tidak ada margin ekstra */
+    font-size: 0.9rem;
+    color: #EDB539;
+    line-height: 1.4;
+}
+
+
+
+
+/* Button Styling */
+.send-button {
+    display: block;
+    width: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e2b23c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: #d1a02b;
+}
+
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 15px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+}
+
+
+
+.article-page {
+    padding-top: 60px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    max-width: 1250px;
+
+}
+
+.section-title-article {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 100px;
+    width: 1250px;
+}
+
+.section-title-article h3 {
+    font-size: 2rem;
+    color: #4C6C36;
+}
+
+.search-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-bar input {
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: none;
+  }
+  
+  .search-category i {
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+
+.article {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: repeat(2, 1fr); /* Membuat 3 kolom */
+    gap: 50px;
+    flex-wrap: wrap; /* Membuat elemen masuk ke baris baru jika ruang terbatas */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Menambahkan margin auto agar konten berada di tengah secara horizontal */
+}
+
+.article-card {
+    background-color: white;
+    width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px; /* Memberikan jarak antar kartu */
+    cursor: pointer;
+}
+
+.article-card:hover {
+    transform: translateY(-5px); /* Efek hover untuk mengangkat kartu */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar saat hover */
+}
+
+.article-info {
+    padding: 20px;
+}
+
+.article-image {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-info {
+    text-align: left;
+}
+
+.article-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.article-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antar item */
+  }
+  
+  .page-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #000;
+    background-color: #fff;
+  }
+  
+  .page-item:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+  }
+  
+  .page-item.active {
+    background-color: #e1b24b; /* Warna emas */
+    color: #fff;
+    border: none;
+  }
+  
+  .page-item i {
+    font-size: 16px;
+  }
+
+
+.menu-category {
+    padding: 100px 50px;
+    width: 100%;
+  }
+  
+  .menu-category h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .category-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .category-list li a {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-size: 1rem;
+  }
+
+  .category-list li a:hover {
+    color: #EDB539;
+    text-decoration: underline; 
+  }
+  
+  .category-list li p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .recent-post {
+    list-style: none; /* Menghapus bullet default */
+    padding: 0;
+    margin: 0;
+}
+
+.recent-post li {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antara gambar dan teks */
+    margin-bottom: 20px; /* Jarak antar item daftar */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Garis pemisah antar item */
+}
+
+.recent-post li:last-child {
+    border-bottom: none; /* Menghapus garis pemisah untuk item terakhir */
+}
+
+.recent-post li img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px; /* Membulatkan tepi gambar */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk estetika */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recent-post li img:hover {
+    transform: scale(1.05); /* Zoom saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.recent-post li .content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.recent-post li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    gap: 15px;
+}
+
+.recent-post li a:hover .content h4 {
+    color: #EDB539;
+    text-decoration: underline; 
+}
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .article-page {
+      padding: 30px;
+    }
+  
+    .article {
+      grid-template-columns: 1fr;
+    }
+    .recent-post li {
+        flex-direction: column; /* Susunan vertikal untuk layar kecil */
+        align-items: flex-start;
+    }
+
+    .recent-post li img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .recent-post li .content h4 {
+        font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .search-bar input {
+      font-size: 0.9rem;
+    }
+  
+    .article-info h3 {
+      font-size: 1.1rem;
+    }
+  
+    .pagination {
+      flex-wrap: wrap;
+    }
+    .recent-post li {
+        flex-direction: column; /* Susunan vertikal untuk layar sangat kecil */
+        align-items: flex-start;
+        gap: 10px; /* Jarak antar elemen di dalam item */
+    }
+
+    .recent-post li img {
+        width: 80px; /* Ukuran gambar lebih kecil */
+        height: 80px;
+        margin-bottom: 8px; /* Menambahkan jarak bawah pada gambar */
+        border-radius: 10px; /* Tepi gambar lebih kecil */
+    }
+
+    .recent-post li .content h4 {
+        font-size: 0.85rem; /* Ukuran teks lebih kecil */
+        line-height: 1.2; /* Menjaga keterbacaan */
+    }
+
+    .recent-post li {
+        padding: 8px; /* Padding lebih kecil untuk menghemat ruang */
+    }
+}
+
+.wrapper-article-detail {
+    max-width: 1200px;
+    margin: 130px auto;
+    padding: 0 20px;
+}
+
+.article-header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.article-header img {
+    width: 1000px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.article-header h1 {
+    font-size: 2.5em;
+    color: #4C6C36;
+}
+
+
+.article-info ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.article-info ul li {
+    display: flex;
+    align-items: center; 
+    font-size: 1rem;
+ 
+}
+
+.article-info ul li i {
+    color: #EDB539;
+    margin-right: 15px; 
+
+}
+
+.article-content {
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #444;
+}
+
+.article-content p{
+    padding: 25px 0px;
+}
+
+.article-tags {
+    display: flex;
+    padding: 20px;
+}
+
+.tag-lists {
+    display: flex;
+    padding: 0px 30px;
+    list-style: none;
+}
+
+.article-tags p {
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.tag-lists li {
+    padding: 10px 20px;
+    margin-right: 20px;
+    background-color: white;
+    border: #a6a6a6 1px solid;
+    border-radius: 10px;
+}
+
+.article-share {
+    display: flex;
+    padding: 20px;
+}
+
+.share-lists {
+    display: flex;
+    padding: 0px 30px;
+    list-style: none;
+}
+
+.article-share p {
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.share-lists li {
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+.prev-next-article {
+    display: flex;
+    padding: 50px 0;
+    gap: 30px; 
+}
+
+.prev-article,
+.next-article {
+    height: 180px;
+    padding: 35px 50px;
+    background-color: #4C6C36;
+    width: 550px;
+    color: #fff; 
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.comment-section-article {
+    padding: 30px 0;
+
+}
+
+.comment-section-header {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.comment-section-header h3{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.comment-wrapper {
+    background-color: white;
+    padding: 40px;
+    display: flex;
+}
+
+.comment-wrapper img {
+    height: 100px;
+    width: auto;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.comment-reply-btn {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.comment-reply-btn i {
+    font-size: 25px;
+    margin-right: 15px;
+    color: #EDB539;
+}
+
+.leave-comment {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.leave-comment-header h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.leave-comment-header p {
+    margin: 0 0 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.comment-input-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.comment-input-fields input[type="text"] {
+    width: calc(50% - 10px); /* Membagi lebar secara merata */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-input-fields textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Izinkan perubahan tinggi */
+    min-height: 120px;
+}
+
+.comment-input-fields input::placeholder,
+.comment-input-fields textarea::placeholder {
+    color: #aaa;
+}
+
+.comment-input-fields input:focus,
+.comment-input-fields textarea:focus {
+    border-color: #4C6C36;
+    outline: none;
+}
+.post-comment-button {
+    display: inline-block;
+    background-color: #EDB539;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 35px;
+    margin-top: 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.post-comment-button:hover {
+    background-color: #C49B2B;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0px;
+    
+}
+
+
+.container h1{
+    font-size: 2.5rem; padding: 30px; color: #4C6C36
+
+}
+.course-card-page {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header {
+    padding: 40px 0;
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.course-title {
+    color: #556B2F;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    font-size: 1em;
+    color: #666;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.view-course-btn {
+    background-color: #E6B325;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.course-card-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.course-card-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.course-card-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.course-meta {
+    display: flex;
+    gap: 15px;
+}
+
+.meta-tag {
+    background-color: #556B2F;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.curriculum {
+    padding: 40px 0;
+}
+
+.curriculum-title {
+    color: #556B2F;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.curriculum-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.item-number {
+    color: #556B2F;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.author {
+    text-align: right;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .course-images {
+        grid-template-columns: 1fr;
+    }
+
+    .curriculum-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .view-course-btn {
+        margin-top: 20px;
+    }
+}
+
+.course-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0px;
+    gap: 60px;
+}
+
+.course-detail-header{
+    background-color: #556B2F;
+    margin-top: 63px;
+    padding: 40px 40px;
+    color: white;
+}
+.course-detail-header-top {
+    display: flex;}
+
+.course-detail-author{
+    padding: 8px 16px;
+}
+.category-badge {
+    background-color: #E9B949;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Jarak antara ikon dan teks */
+    font-size: 14px;
+}
+
+.meta-item i {
+    font-size: 20px; /* Ukuran ikon */
+    color: #E6B325; /* Warna ikon */
+    
+}
+
+
+/* Container styling */
+.course-overview-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab navigation */
+.overview-tabs {
+    display: flex;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.overview-tab {
+    flex: 1;
+    text-align: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.overview-tab:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.overview-tab.active {
+    background-color: #dedede;
+    color: #E6B325;
+    font-weight: bold;
+}
+
+/* Content sections */
+.overview-content,
+.curiculum-content,
+.instructor-content,
+.faqs-content,
+.review-content {
+    display: none; /* Hide by default */
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #dedede;
+}
+
+.overview-content.active,
+.curiculum-content.active,
+.instructor-content.active,
+.faqs-content.active,
+.review-content.active {
+    display: block; /* Show active content */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .overview-tab {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+
+    .overview-content {
+        font-size: 13px;
+    }
+}
+
+.course-section {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.section-header.active i {
+    transform: rotate(180deg);
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.section-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.section-content {
+    display: none;
+    padding: 0;
+}
+
+.section-content.active {
+    display: block;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+    gap: 12px;
+    background-color: white;
+
+}
+
+.lesson-title {
+    flex-grow: 1;
+    font-size: 15px;
+    color: #333;
+}
+
+.preview-btn {
+    background: #E5B45C;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.lesson-duration {
+    color: #666;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.lesson-status {
+    color: #22C55E;
+    margin-left: auto;
+}
+
+.lesson-locked {
+    color: #666;
+}
+/* Secara default, sembunyikan konten */
+.section-content {
+    display: none;
+}
+
+/* Ketika kelas 'active' ditambahkan ke section-content, tampilkan konten */
+.section-content.active {
+    display: block;
+}
+
+.instructor-head-info {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+}
+.instructor-head-info img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.instructor-contain-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.instructor-contain-info h3{
+    font-size: 1.6rem;
+
+}
+.tutors-meta .tutors-meta-item i {
+    color: #E6B325 ;
+    padding-right: 15px;
+}
+
+.course-comment-section {
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.course-comment-wrapper {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.course-comment-wrapper img {
+    height: 100px;
+    width: auto;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+
+.login-register-container {
+    display: flex;
+    justify-content: center;
+    padding: 120px 0px;
+    gap: 80px;
+    width: 100%;
+    background-color: #4C6C36;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    color: #4B6043;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #4B6043;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #EDB539;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #C4A137;
+}
+
+.forgot-password {
+    margin-top: 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.forgot-password a {
+    color: #666;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+}
